@@ -9,28 +9,24 @@
    ========================= */
 
 :root {
-    --burnt-orange: #C65D1E;
-    --terracotta: #D97A36;
-    --soft-orange: #EAA66B;
+    --primary: #C65D1E;
+    --primary-dark: #9E4315;
+    --secondary: #4E342E;
+    --accent: #D4AF37;
 
-    --coffee: #4E342E;
-    --mocha: #6A4B3A;
-    --cocoa: #8B6A5A;
+    --terracotta: #B85C38;
+    --coffee: #5A3A2E;
+    --sage: #68745A;
+    --olive: #7A8060;
 
-    --ivory: #FAF7F2;
-    --champagne: #F4EBE4;
-    --sand: #E8DCCB;
-    --white: #FFFFFF;
+    --cream: #FAF7F2;
+    --ivory: #FFFDF9;
+    --sand: #EAD8C8;
+    --rose: #D9A28F;
 
-    --olive: #7B8B52;
-    --sage: #A8B08A;
+    --text: #5F5149;
 
-    --gold: #D4AF37;
-    --light-gold: #E8C96B;
-
-    --shadow: rgba(78, 52, 46, 0.12);
 }
-
 
 /* =========================
    RESET
@@ -1157,6 +1153,242 @@ footer small {
 
     flex-direction: column;
 }
+/* =====================================================
+   COLLAPSIBLE PROGRAMME
+===================================================== */
+
+.programme {
+    background:
+        linear-gradient(
+            135deg,
+            #FFF9F3,
+            #F3DED0
+        ) !important;
+}
+
+
+/* ACCORDION */
+
+.programme-accordion {
+    max-width: 850px;
+    margin: 22px auto;
+
+    background: rgba(255,255,255,.78);
+
+    border: 1px solid rgba(198,93,30,.15);
+
+    border-radius: 22px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 15px 40px rgba(78,52,46,.08);
+
+    transition: .35s ease;
+}
+
+
+.programme-accordion:hover {
+    border-color: rgba(198,93,30,.30);
+
+    transform: translateY(-2px);
+}
+
+
+/* HEADER */
+
+.programme-accordion summary {
+    list-style: none;
+
+    cursor: pointer;
+
+    padding: 25px 30px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+
+.programme-accordion summary::-webkit-details-marker {
+    display: none;
+}
+
+
+.programme-title {
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+}
+
+
+.programme-icon {
+    width: 52px;
+    height: 52px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #F7E0D2;
+
+    font-size: 1.35rem;
+}
+
+
+.programme-label {
+    display: block;
+
+    color: #788765;
+
+    font-size: .65rem;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 4px;
+}
+
+
+.programme-title h3 {
+    font-family: 'Cormorant Garamond', serif;
+
+    color: #4E342E;
+
+    font-size: 1.7rem;
+}
+
+
+/* PLUS ICON */
+
+.programme-arrow {
+    width: 35px;
+    height: 35px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #D4AF37;
+
+    color: #C65D1E;
+
+    font-size: 1.3rem;
+
+    transition: .3s;
+}
+
+
+.programme-accordion[open] .programme-arrow {
+    transform: rotate(45deg);
+
+    background: #C65D1E;
+
+    color: white;
+}
+
+
+/* CONTENT */
+
+.programme-content {
+    padding: 0 30px 28px;
+
+    animation: programmeOpen .4s ease;
+}
+
+
+@keyframes programmeOpen {
+
+    from {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* INDIVIDUAL ITEMS */
+
+.programme-item {
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    padding: 13px 8px;
+
+    border-top: 1px solid rgba(78,52,46,.08);
+}
+
+
+.programme-item span {
+    min-width: 28px;
+
+    color: #D4AF37;
+
+    font-size: .7rem;
+
+    font-weight: 600;
+}
+
+
+.programme-item p {
+    margin: 0;
+
+    color: #6A493B;
+
+    font-size: .9rem;
+}
+
+
+.programme-item.highlight p {
+    color: #C65D1E;
+
+    font-weight: 600;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+    .programme-accordion summary {
+        padding: 20px;
+    }
+
+    .programme-title {
+        gap: 14px;
+    }
+
+    .programme-icon {
+        width: 45px;
+        height: 45px;
+    }
+
+    .programme-title h3 {
+        font-size: 1.45rem;
+    }
+
+    .programme-content {
+        padding: 0 20px 20px;
+    }
+
+}
 
 
 /* INDIVIDUAL ENTRY */
@@ -2200,4 +2432,1542 @@ footer small {
         font-size: .65rem;
     }
 
+}
+/* =====================================================
+   RICHER SECTION COLORS
+===================================================== */
+
+.countdown {
+    background:
+        linear-gradient(
+            135deg,
+            #FAF7F2 0%,
+            #F3E4D7 50%,
+            #FAF7F2 100%
+        );
+}
+
+.scripture {
+    background:
+        linear-gradient(
+            120deg,
+            #FFFDF9,
+            #F5E9DF
+        );
+}
+
+.venues {
+    background:
+        linear-gradient(
+            135deg,
+            #F4E4D8,
+            #FAF7F2
+        );
+}
+
+.story {
+    background:
+        linear-gradient(
+            120deg,
+            #FAF7F2,
+            #EEE6D8
+        );
+}
+
+.gallery {
+    background:
+        linear-gradient(
+            135deg,
+            #FFFDF9,
+            #F2E1D5
+        );
+}
+/* =====================================================
+   BOTANICAL CORNER DECOR
+===================================================== */
+
+.scripture,
+.venues,
+.story,
+.gallery,
+.qr-experience {
+    position: relative;
+    overflow: hidden;
+}
+
+.scripture::before,
+.venues::before,
+.story::before,
+.gallery::before,
+.qr-experience::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 260px;
+    height: 260px;
+
+    background-image:
+        url("assets/floral/top-left.svg");
+
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    top: -35px;
+    left: -35px;
+
+    opacity: .20;
+
+    pointer-events: none;
+
+    z-index: 0;
+}
+
+
+.scripture::after,
+.venues::after,
+.story::after,
+.gallery::after,
+.qr-experience::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 300px;
+    height: 300px;
+
+    background-image:
+        url("assets/floral/bottom-right.svg");
+
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    bottom: -60px;
+    right: -60px;
+
+    opacity: .18;
+
+    pointer-events: none;
+
+    z-index: 0;
+}
+/* =====================================================
+   BOTANICAL SECTION DETAILS
+===================================================== */
+
+.section-label {
+    color: var(--sage);
+    letter-spacing: 4px;
+    font-size: .72rem;
+    font-weight: 600;
+}
+
+.programme-intro::after,
+.gallery-intro::after,
+.story-inner::after {
+
+    content: "❧  ✦  ❧";
+
+    display: block;
+
+    margin: 25px auto 0;
+
+    color: var(--accent);
+
+    font-size: 1.2rem;
+
+    letter-spacing: 8px;
+}
+.venue-card {
+    position: relative;
+    border: 1px solid rgba(198, 93, 30, .12);
+
+    background:
+        linear-gradient(
+            145deg,
+            #FFFDF9,
+            #F7EDE5
+        );
+}
+
+.venue-card:nth-child(2) {
+    background:
+        linear-gradient(
+            145deg,
+            #FFFDF9,
+            #EEE9DD
+        );
+}
+
+.venue-card::before {
+    content: "✦";
+
+    position: absolute;
+
+    top: 20px;
+    right: 25px;
+
+    color: var(--accent);
+
+    opacity: .65;
+
+    font-size: 1.2rem;
+}
+
+.venue-icon {
+    color: var(--primary);
+}
+/* =====================================================
+   PROJECT EVERGREEN — VISUAL RESTORE
+   Warm • Romantic • Botanical • Luxury
+===================================================== */
+
+/* ---------- WARMER COLOUR SYSTEM ---------- */
+
+:root {
+    --burnt-orange: #C65D1E;
+    --terracotta: #D97845;
+    --soft-orange: #E9A06F;
+
+    --coffee: #4E342E;
+    --mocha: #6A493B;
+    --cocoa: #8B6A5A;
+
+    --ivory: #FFF9F3;
+    --cream: #FDF1E8;
+    --peach: #F6DED0;
+    --sand: #E8C7B4;
+
+    --sage: #788765;
+    --olive: #657451;
+
+    --gold: #D4AF37;
+    --light-gold: #E8C96B;
+}
+
+
+/* ---------- REMOVE THE VEIL ---------- */
+
+/* This was blurring the page */
+.overlay {
+    display: none !important;
+}
+
+
+/* ---------- KEEP THE HERO BRIGHT ---------- */
+
+.hero {
+    background:
+        radial-gradient(
+            circle at 50% 35%,
+            #FFFFFF 0%,
+            #FFF8F1 48%,
+            #F5E0D2 100%
+        ) !important;
+}
+
+
+/* ---------- PROPER GLASS NAVBAR ---------- */
+
+.navbar {
+    background: rgba(255, 250, 245, 0.58) !important;
+    backdrop-filter: blur(18px) saturate(140%) !important;
+    -webkit-backdrop-filter: blur(18px) saturate(140%) !important;
+
+    border: 1px solid rgba(255, 255, 255, 0.65) !important;
+
+    box-shadow:
+        0 10px 35px rgba(78, 52, 46, 0.10),
+        inset 0 1px 0 rgba(255,255,255,.8);
+
+}
+
+
+/* NAV TEXT */
+
+.navbar a {
+    color: #4E342E !important;
+}
+
+.navbar a:hover {
+    color: #C65D1E !important;
+}
+
+.logo {
+    color: #4E342E !important;
+}
+
+.logo .heart {
+    color: #C65D1E !important;
+}
+
+
+/* ---------- COUNTDOWN RESTORE ---------- */
+
+.countdown {
+    position: relative;
+    z-index: 5;
+}
+
+.countdown div {
+    background:
+        linear-gradient(
+            145deg,
+            #FFFFFF 0%,
+            #FFF4EC 100%
+        ) !important;
+
+    border: 1px solid rgba(198, 93, 30, 0.16);
+
+    box-shadow:
+        0 12px 30px rgba(78, 52, 46, 0.10),
+        inset 0 1px 0 rgba(255,255,255,.9);
+
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* subtle gold/orange accent */
+
+.countdown div::before {
+    content: "";
+    position: absolute;
+
+    width: 70px;
+    height: 70px;
+
+    top: -35px;
+    right: -35px;
+
+    border-radius: 50%;
+
+    background: rgba(212,175,55,.12);
+
+    pointer-events: none;
+}
+
+
+.countdown span {
+    color: #C65D1E !important;
+}
+
+.countdown small {
+    color: #6A493B;
+}
+
+
+/* ---------- SECTION COLOURS ---------- */
+
+.scripture {
+    background:
+        linear-gradient(
+            135deg,
+            #FFF9F3,
+            #F8E5D8
+        ) !important;
+}
+
+.venues {
+    background:
+        linear-gradient(
+            135deg,
+            #F7E0D2,
+            #FFF8F2
+        ) !important;
+}
+
+.story {
+    background:
+        linear-gradient(
+            135deg,
+            #FFF9F3,
+            #F3E4D5
+        ) !important;
+}
+
+.gallery {
+    background:
+        linear-gradient(
+            135deg,
+            #FFFDF9,
+            #F7E0D2
+        ) !important;
+}
+
+
+/* ---------- SECTION HEADINGS ---------- */
+
+section h2 {
+    color: #4E342E !important;
+}
+
+.section-label {
+    color: #788765 !important;
+}
+
+
+/* ---------- WARMER CARDS ---------- */
+
+.card {
+    background:
+        linear-gradient(
+            145deg,
+            #FFFFFF,
+            #FFF3EA
+        ) !important;
+
+    border: 1px solid rgba(198,93,30,.12);
+}
+
+.card h3 {
+    color: #4E342E !important;
+}
+
+.card p {
+    color: #6A493B !important;
+}
+/* =====================================================
+   FLOATING HEARTS
+===================================================== */
+
+.hearts {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.hearts span {
+    position: absolute;
+    top: -60px;
+
+    font-family: Georgia, serif;
+
+    color: #C65D1E;
+
+    opacity: 0;
+
+    animation: heartFall linear infinite;
+}
+
+
+/* INDIVIDUAL HEARTS */
+
+.heart1 {
+    left: 8%;
+    font-size: 1.1rem;
+    animation-duration: 14s;
+    animation-delay: 1s;
+}
+
+.heart2 {
+    left: 23%;
+    font-size: .9rem;
+    animation-duration: 18s;
+    animation-delay: 5s;
+}
+
+.heart3 {
+    left: 42%;
+    font-size: 1.3rem;
+    animation-duration: 16s;
+    animation-delay: 3s;
+}
+
+.heart4 {
+    left: 61%;
+    font-size: .8rem;
+    animation-duration: 19s;
+    animation-delay: 8s;
+}
+
+.heart5 {
+    left: 78%;
+    font-size: 1.2rem;
+    animation-duration: 15s;
+    animation-delay: 4s;
+}
+
+.heart6 {
+    left: 92%;
+    font-size: .9rem;
+    animation-duration: 17s;
+    animation-delay: 10s;
+}
+
+
+/* FLOAT + DRIFT */
+
+@keyframes heartFall {
+
+    0% {
+        transform:
+            translateY(-60px)
+            translateX(0)
+            rotate(-10deg);
+
+        opacity: 0;
+    }
+
+    12% {
+        opacity: .30;
+    }
+
+    50% {
+        transform:
+            translateY(50vh)
+            translateX(35px)
+            rotate(10deg);
+
+        opacity: .22;
+    }
+
+    85% {
+        opacity: .16;
+    }
+
+    100% {
+        transform:
+            translateY(110vh)
+            translateX(-30px)
+            rotate(-10deg);
+
+        opacity: 0;
+    }
+}
+/* =========================================
+   PRELUDE TO FOREVER
+   ========================================= */
+
+.prelude {
+    position: relative;
+    padding: 110px 25px 100px;
+    background:
+        radial-gradient(circle at 15% 30%, rgba(198,93,30,.07), transparent 30%),
+        linear-gradient(135deg, #FFFDF9, #F5E0D2);
+    overflow: hidden;
+}
+
+.prelude-intro {
+    max-width: 650px;
+    margin: 0 auto 55px;
+    text-align: center;
+}
+
+.prelude-intro h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3.8rem;
+    color: #4E342E;
+    margin: 15px 0;
+}
+
+.prelude-intro > p:last-child {
+    max-width: 520px;
+    margin: auto;
+    color: #6A493B;
+    line-height: 1.8;
+}
+
+
+.prelude-cards {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+}
+
+
+.prelude-card {
+    background: rgba(255,255,255,.72);
+    border: 1px solid rgba(198,93,30,.12);
+    border-radius: 22px;
+    padding: 12px;
+    box-shadow: 0 20px 45px rgba(78,52,46,.10);
+    transition: .4s ease;
+}
+
+.prelude-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 28px 55px rgba(78,52,46,.15);
+}
+
+
+.prelude-image {
+    height: 300px;
+    border-radius: 16px;
+    background:
+        radial-gradient(circle at 50% 40%, rgba(212,175,55,.16), transparent 35%),
+        linear-gradient(145deg, #F7E0D2, #EAC5B0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #C65D1E;
+}
+
+.prelude-image span {
+    font-family: Georgia, serif;
+    font-size: 3rem;
+    margin-bottom: 18px;
+    opacity: .75;
+}
+
+.prelude-image p {
+    margin: 0;
+    font-size: .65rem;
+    letter-spacing: 4px;
+    color: #8B6A5A;
+}
+
+
+.prelude-caption {
+    padding: 20px 12px 12px;
+}
+
+.prelude-caption span {
+    font-size: .65rem;
+    letter-spacing: 2px;
+    color: #D4AF37;
+}
+
+.prelude-caption h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.65rem;
+    color: #4E342E;
+    margin: 5px 0 0;
+}
+
+
+.prelude-note {
+    text-align: center;
+    margin-top: 50px;
+    color: #8B6A5A;
+    font-size: .75rem;
+    letter-spacing: 1px;
+}
+
+.prelude-note span {
+    color: #D4AF37;
+    padding: 0 12px;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+    .prelude {
+        padding: 80px 20px;
+    }
+
+    .prelude-intro h2 {
+        font-size: 3rem;
+    }
+
+    .prelude-cards {
+        grid-template-columns: 1fr;
+        max-width: 420px;
+    }
+
+    .prelude-image {
+        height: 250px;
+    }
+}
+/* =========================================
+   COUNTDOWN — CLEAN BACKGROUND
+   ========================================= */
+
+.countdown {
+    background: transparent !important;
+    box-shadow: none !important;
+    border: none !important;
+    position: relative;
+    z-index: 5;
+}
+
+.countdown::before,
+.countdown::after {
+    display: none !important;
+}
+
+.countdown div {
+    background: linear-gradient(
+        145deg,
+        #FFFFFF 0%,
+        #FFF4EC 100%
+    ) !important;
+
+    border: 1px solid rgba(198, 93, 30, 0.16) !important;
+
+    box-shadow:
+        0 12px 30px rgba(78, 52, 46, 0.10),
+        inset 0 1px 0 rgba(255,255,255,.9) !important;
+}
+/* =========================================
+   FLOATING HEARTS
+   ========================================= */
+
+.hearts {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.hearts .heart {
+    position: absolute;
+    top: -60px;
+    color: #C65D1E;
+    opacity: 0;
+    font-family: Georgia, serif;
+    animation: heartFloat linear infinite;
+}
+
+.heart-1 {
+    left: 7%;
+    font-size: 18px;
+    animation-duration: 15s;
+    animation-delay: 1s;
+}
+
+.heart-2 {
+    left: 19%;
+    font-size: 14px;
+    animation-duration: 19s;
+    animation-delay: 6s;
+}
+
+.heart-3 {
+    left: 34%;
+    font-size: 21px;
+    animation-duration: 17s;
+    animation-delay: 3s;
+}
+
+.heart-4 {
+    left: 52%;
+    font-size: 13px;
+    animation-duration: 20s;
+    animation-delay: 9s;
+}
+
+.heart-5 {
+    left: 68%;
+    font-size: 19px;
+    animation-duration: 16s;
+    animation-delay: 4s;
+}
+
+.heart-6 {
+    left: 82%;
+    font-size: 14px;
+    animation-duration: 18s;
+    animation-delay: 11s;
+}
+
+.heart-7 {
+    left: 94%;
+    font-size: 17px;
+    animation-duration: 21s;
+    animation-delay: 7s;
+}
+
+
+@keyframes heartFloat {
+
+    0% {
+        transform:
+            translateY(-60px)
+            translateX(0)
+            rotate(-12deg);
+        opacity: 0;
+    }
+
+    12% {
+        opacity: .28;
+    }
+
+    45% {
+        transform:
+            translateY(45vh)
+            translateX(30px)
+            rotate(10deg);
+        opacity: .20;
+    }
+
+    75% {
+        transform:
+            translateY(75vh)
+            translateX(-25px)
+            rotate(-8deg);
+        opacity: .16;
+    }
+
+    100% {
+        transform:
+            translateY(110vh)
+            translateX(20px)
+            rotate(12deg);
+        opacity: 0;
+    }
+}
+
+
+/* Keep hero content above the hearts */
+
+.hero .navbar,
+.hero .hero-content {
+    position: relative;
+    z-index: 5;
+}
+/* =========================================
+   PROJECT EVERGREEN — DREAMY HERO BACKDROP
+   ========================================= */
+
+.hero {
+    position: relative;
+    overflow: hidden;
+
+    background:
+        /* soft sunlight */
+        radial-gradient(
+            circle at 78% 30%,
+            rgba(255, 244, 204, .95) 0%,
+            rgba(255, 224, 177, .45) 18%,
+            transparent 42%
+        ),
+
+        /* warm sunset glow */
+        radial-gradient(
+            ellipse at 50% 55%,
+            rgba(232, 151, 94, .22) 0%,
+            transparent 52%
+        ),
+
+        /* sky */
+        linear-gradient(
+            180deg,
+            #F9E7D8 0%,
+            #F8DCC8 28%,
+            #F4C9AD 55%,
+            #E9B28F 72%,
+            #D8946D 100%
+        ) !important;
+}
+
+
+/* THE SUN */
+
+.hero::before {
+    content: "";
+    position: absolute;
+
+    width: 420px;
+    height: 420px;
+
+    top: 5%;
+    right: 7%;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(255,248,215,.95) 0%,
+            rgba(255,226,169,.55) 25%,
+            rgba(255,195,130,.18) 48%,
+            transparent 70%
+        );
+
+    filter: blur(8px);
+
+    pointer-events: none;
+
+    z-index: 0;
+}
+
+
+/* DISTANT LANDSCAPE */
+
+.hero::after {
+    content: "";
+
+    position: absolute;
+
+    left: -10%;
+    bottom: -10%;
+
+    width: 120%;
+    height: 40%;
+
+    background:
+        /* distant mountain/hill silhouettes */
+        radial-gradient(
+            ellipse at 15% 100%,
+            rgba(103,89,78,.24) 0%,
+            rgba(103,89,78,.15) 35%,
+            transparent 60%
+        ),
+
+        radial-gradient(
+            ellipse at 42% 100%,
+            rgba(118,94,78,.22) 0%,
+            rgba(118,94,78,.13) 38%,
+            transparent 65%
+        ),
+
+        radial-gradient(
+            ellipse at 75% 100%,
+            rgba(102,84,72,.25) 0%,
+            rgba(102,84,72,.13) 38%,
+            transparent 65%
+        );
+
+    filter: blur(10px);
+
+    pointer-events: none;
+
+    z-index: 1;
+}
+
+
+/* SOFT ATMOSPHERIC HAZE */
+
+.hero .hero-content {
+    position: relative;
+    z-index: 5;
+}
+
+.hero .navbar {
+    position: relative;
+    z-index: 10;
+}
+
+
+/* EXTRA GOLDEN LIGHT ACROSS THE HERO */
+
+.hero {
+    isolation: isolate;
+}
+
+.hero > * {
+    position: relative;
+}
+
+.hero .hearts {
+    position: absolute !important;
+    z-index: 4 !important;
+}
+
+.hero .countdown {
+    position: relative;
+    z-index: 6;
+}
+/* =========================================
+   LUXURY COUNTDOWN CARDS
+   ========================================= */
+
+.countdown {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 28px;
+
+    margin: 45px auto 0;
+    padding: 10px;
+
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+
+/* CARD */
+
+.countdown .countdown-card {
+    position: relative;
+
+    width: 155px;
+    height: 135px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background:
+        linear-gradient(
+            145deg,
+            #FFFDF9 0%,
+            #FFF4EA 100%
+        ) !important;
+
+    border: 1px solid #D4AF37 !important;
+    border-radius: 14px;
+
+    box-shadow:
+        0 15px 35px rgba(78,52,46,.10),
+        inset 0 1px 0 rgba(255,255,255,.95);
+
+    overflow: visible;
+
+    transition: transform .35s ease,
+                box-shadow .35s ease;
+}
+
+
+/* INNER GOLD BORDER */
+
+.countdown .countdown-card::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 5px;
+
+    border: 1px solid rgba(212,175,55,.45);
+
+    border-radius: 10px;
+
+    pointer-events: none;
+}
+
+
+/* LITTLE CORNER ORNAMENTS */
+
+.countdown .countdown-card::after {
+    content: "✦";
+
+    position: absolute;
+
+    top: -8px;
+    right: -7px;
+
+    width: 23px;
+    height: 23px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #FFF9F3;
+
+    border: 1px solid #D4AF37;
+
+    border-radius: 50%;
+
+    color: #C65D1E;
+
+    font-size: .65rem;
+
+    z-index: 3;
+}
+
+
+/* NUMBER */
+
+.countdown .countdown-card > span:not(.countdown-icon) {
+    position: relative;
+    z-index: 2;
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 3.3rem;
+    line-height: 1;
+
+    color: #4E342E !important;
+
+    font-weight: 500;
+}
+
+
+/* ICON */
+
+.countdown .countdown-icon {
+    position: relative;
+    z-index: 2;
+
+    display: block;
+
+    margin-bottom: 4px;
+
+    font-size: 1.05rem;
+
+    color: #C65D1E;
+
+    line-height: 1;
+}
+
+
+/* LABEL */
+
+.countdown .countdown-card small {
+    position: relative;
+    z-index: 2;
+
+    margin-top: 7px;
+
+    font-size: .58rem;
+
+    letter-spacing: 3px;
+
+    color: #8B6A5A !important;
+}
+
+
+/* HOVER */
+
+.countdown .countdown-card:hover {
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 22px 45px rgba(78,52,46,.15),
+        0 0 0 1px rgba(212,175,55,.20),
+        inset 0 1px 0 rgba(255,255,255,.95);
+}
+
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+    .countdown {
+        gap: 10px;
+        flex-wrap: wrap;
+        padding: 5px;
+    }
+
+    .countdown .countdown-card {
+        width: 135px;
+        height: 125px;
+    }
+
+    .countdown .countdown-card > span:not(.countdown-icon) {
+        font-size: 2.8rem;
+    }
+
+    .countdown .countdown-icon {
+        font-size: .9rem;
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    .countdown {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 320px;
+        gap: 14px;
+    }
+
+    .countdown .countdown-card {
+        width: auto;
+        height: 125px;
+    }
+}
+/* =========================================
+   NAVBAR — FORCE VISIBLE
+   ========================================= */
+
+.hero .navbar {
+    position: fixed !important;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%) !important;
+
+    width: 90%;
+    max-width: 1200px;
+
+    opacity: 1 !important;
+    visibility: visible !important;
+
+    z-index: 9999 !important;
+
+    background: rgba(255, 250, 245, 0.62) !important;
+
+    backdrop-filter: blur(18px) saturate(140%) !important;
+    -webkit-backdrop-filter: blur(18px) saturate(140%) !important;
+
+    border: 1px solid rgba(255, 255, 255, .70) !important;
+
+    box-shadow:
+        0 12px 35px rgba(78, 52, 46, .12),
+        inset 0 1px 0 rgba(255,255,255,.85) !important;
+}
+/* =========================================
+   COUNTDOWN — BOTANICAL CORNERS
+   ========================================= */
+
+.countdown .countdown-card::after {
+    content: "❧";
+
+    position: absolute;
+
+    top: -15px;
+    right: -10px;
+
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #FFF9F3;
+
+    border: 1px solid rgba(212,175,55,.65);
+
+    border-radius: 50%;
+
+    color: #788765;
+
+    font-size: 1.35rem;
+
+    z-index: 5;
+
+    transform: rotate(-20deg);
+}
+
+
+/* SECOND DECORATION */
+
+.countdown .countdown-card {
+    isolation: isolate;
+}
+
+.countdown .countdown-card .countdown-icon {
+    color: #C65D1E;
+}
+
+
+/* LITTLE GOLD CORNER MARKS */
+
+.countdown .countdown-card {
+    background-image:
+        linear-gradient(
+            135deg,
+            transparent 0%,
+            transparent 92%,
+            rgba(212,175,55,.25) 92%,
+            rgba(212,175,55,.25) 94%,
+            transparent 94%
+        ) !important;
+}
+
+
+/* DIFFERENT ROTATION FOR EACH CARD */
+
+.countdown-card:nth-child(2)::after {
+    transform: rotate(15deg);
+    color: #C65D1E;
+}
+
+.countdown-card:nth-child(3)::after {
+    transform: rotate(-35deg);
+    color: #788765;
+}
+
+.countdown-card:nth-child(4)::after {
+    transform: rotate(20deg);
+    color: #C65D1E;
+}
+/* =========================================
+   DREAMY SUNSET HERO
+   ========================================= */
+
+.hero {
+    background:
+        radial-gradient(
+            circle at 78% 27%,
+            rgba(255, 247, 214, .95) 0%,
+            rgba(255, 224, 180, .55) 15%,
+            rgba(255, 201, 151, .18) 32%,
+            transparent 50%
+        ),
+
+        radial-gradient(
+            ellipse at 50% 60%,
+            rgba(219, 137, 91, .25),
+            transparent 55%
+        ),
+
+        linear-gradient(
+            180deg,
+            #F9E9DC 0%,
+            #F7DCC8 30%,
+            #F2C7AB 55%,
+            #E7AD8A 76%,
+            #D8946D 100%
+        ) !important;
+}
+
+
+/* GOLDEN SUN */
+
+.hero::before {
+    content: "";
+
+    position: absolute;
+
+    width: 380px;
+    height: 380px;
+
+    top: 4%;
+    right: 5%;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(255, 250, 220, .95) 0%,
+            rgba(255, 225, 170, .55) 28%,
+            rgba(255, 201, 140, .20) 50%,
+            transparent 72%
+        );
+
+    filter: blur(10px);
+
+    pointer-events: none;
+
+    z-index: 0;
+}
+
+
+/* DISTANT HILLS */
+
+.hero::after {
+    content: "";
+
+    position: absolute;
+
+    left: -10%;
+    bottom: -5%;
+
+    width: 120%;
+    height: 34%;
+
+    background:
+        radial-gradient(
+            ellipse at 12% 100%,
+            rgba(92, 77, 69, .24) 0%,
+            rgba(92, 77, 69, .13) 32%,
+            transparent 65%
+        ),
+
+        radial-gradient(
+            ellipse at 42% 100%,
+            rgba(111, 86, 72, .23) 0%,
+            rgba(111, 86, 72, .12) 35%,
+            transparent 65%
+        ),
+
+        radial-gradient(
+            ellipse at 78% 100%,
+            rgba(91, 76, 67, .25) 0%,
+            rgba(91, 76, 67, .12) 35%,
+            transparent 65%
+        );
+
+    filter: blur(12px);
+
+    pointer-events: none;
+
+    z-index: 1;
+}
+/* =========================================
+   GLOBAL NAVBAR — ALWAYS ON TOP
+   ========================================= */
+
+.navbar {
+    position: fixed !important;
+
+    top: 20px !important;
+    left: 50% !important;
+
+    transform: translateX(-50%) !important;
+
+    z-index: 99999 !important;
+
+    isolation: isolate;
+
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+
+/* Make sure sections cannot cover it */
+
+section,
+footer {
+    position: relative;
+    z-index: 1;
+}
+
+
+/* But the hero decorations stay below */
+
+.hero .hearts {
+    z-index: 3 !important;
+}
+
+.hero-content {
+    z-index: 10 !important;
+}
+/* =========================================
+   PROJECT EVERGREEN
+   CONTINUOUS SUNSET WORLD
+   ========================================= */
+
+.evergreen-world {
+    position: fixed;
+    inset: 0;
+
+    overflow: hidden;
+
+    pointer-events: none;
+
+    z-index: 0;
+
+    background:
+        linear-gradient(
+            180deg,
+            #F8E9DC 0%,
+            #F5D8C2 35%,
+            #EFBF9F 65%,
+            #DFA078 100%
+        );
+}
+
+
+/* SUN */
+
+.world-sun {
+    position: absolute;
+
+    width: 420px;
+    height: 420px;
+
+    top: 12%;
+    right: 8%;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(255,251,220,.98) 0%,
+            rgba(255,229,176,.72) 25%,
+            rgba(255,201,142,.32) 48%,
+            transparent 72%
+        );
+
+    filter: blur(7px);
+}
+
+
+/* BACK MOUNTAINS */
+
+.world-mountains {
+    position: absolute;
+
+    left: -10%;
+    width: 120%;
+
+    bottom: 0;
+
+    pointer-events: none;
+}
+
+
+.world-mountains-back {
+    height: 38%;
+
+    opacity: .32;
+
+    background:
+        radial-gradient(
+            ellipse at 10% 100%,
+            #806D62 0%,
+            transparent 58%
+        ),
+
+        radial-gradient(
+            ellipse at 35% 100%,
+            #806D62 0%,
+            transparent 60%
+        ),
+
+        radial-gradient(
+            ellipse at 63% 100%,
+            #806D62 0%,
+            transparent 58%
+        ),
+
+        radial-gradient(
+            ellipse at 90% 100%,
+            #806D62 0%,
+            transparent 60%
+        );
+
+    filter: blur(8px);
+}
+
+
+/* FRONT MOUNTAINS */
+
+.world-mountains-front {
+    height: 25%;
+
+    opacity: .42;
+
+    background:
+        radial-gradient(
+            ellipse at 18% 100%,
+            #65554D 0%,
+            transparent 55%
+        ),
+
+        radial-gradient(
+            ellipse at 52% 100%,
+            #65554D 0%,
+            transparent 60%
+        ),
+
+        radial-gradient(
+            ellipse at 85% 100%,
+            #65554D 0%,
+            transparent 55%
+        );
+
+    filter: blur(12px);
+}
+
+
+/* ATMOSPHERIC HAZE */
+
+.world-haze {
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        radial-gradient(
+            ellipse at 50% 55%,
+            rgba(255,245,226,.25),
+            transparent 55%
+        ),
+
+        linear-gradient(
+            180deg,
+            rgba(255,255,255,.10),
+            transparent 45%
+        );
 }
