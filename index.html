@@ -48,9 +48,6 @@
 
    
 </div>
-    <section class="hero" id="home">
-
-        <!-- FLOATING HEARTS -->
 <div class="hearts" aria-hidden="true">
     <span class="heart heart-1">♥</span>
     <span class="heart heart-2">♡</span>
@@ -60,6 +57,33 @@
     <span class="heart heart-6">♡</span>
     <span class="heart heart-7">♥</span>
 </div>
+
+<nav class="navbar">
+    <div class="logo">
+        P <span class="heart">♥</span> C
+    </div>
+
+    <div class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#programme">Programme</a>
+        <a href="#venue">Venue</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#qr">QR</a>
+    </div>
+</nav>
+
+    <section class="hero" id="home">
+
+            <div class="botanical botanical-left">
+    <img src="assets/floral/top-left.svg" alt="" aria-hidden="true">
+</div>
+
+<div class="botanical botanical-right">
+    <img src="assets/floral/top-right.svg" alt="" aria-hidden="true">
+</div>
+
+        <!-- FLOATING HEARTS -->
+
 
        <nav class="navbar">
 
@@ -115,9 +139,11 @@
 
     </p>
 
-    <a href="#countdown" class="main-btn">Begin Our Journey
-
-    </a>
+   <a href="#countdown" class="main-btn evergreen-btn">
+    <span class="btn-leaf left">❧</span>
+    <span class="btn-text">Begin Our Journey</span>
+    <span class="btn-leaf right">❧</span>
+</a>
     <div class="home-welcome">
 
     <div class="home-ornament">
@@ -159,45 +185,104 @@
 
     <div class="prelude-cards">
 
-        <div class="prelude-card">
-            <div class="prelude-image">
-                <span>♥</span>
-                <p>THE BEGINNING</p>
+       <div class="prelude-cards">
+
+    <!-- CARD 01 -->
+    <div class="prelude-card">
+        <div class="prelude-image photo-carousel" data-carousel="beginning">
+
+            <img
+                src="assets/images/som.jpeg"
+                alt="Paul and Comfort"
+                class="carousel-photo active"
+            >
+
+            <img
+                src="assets/images/11.jpeg"
+                alt="Paul and Comfort"
+                class="carousel-photo"
+            >
+
+            <button class="carousel-btn carousel-prev" type="button">‹</button>
+            <button class="carousel-btn carousel-next" type="button">›</button>
+
+            <div class="carousel-dots">
+                <span class="carousel-dot active"></span>
+                <span class="carousel-dot"></span>
             </div>
 
-            <div class="prelude-caption">
-                <span>01</span>
-                <h3>Where It All Began</h3>
+            <div class="carousel-label">
+                THE BEGINNING
             </div>
+
         </div>
 
-
-        <div class="prelude-card">
-            <div class="prelude-image">
-                <span>✦</span>
-                <p>THE JOURNEY</p>
-            </div>
-
-            <div class="prelude-caption">
-                <span>02</span>
-                <h3>Moments Along The Way</h3>
-            </div>
+        <div class="prelude-caption">
+            <span>01</span>
+            <h3>Where It All Began</h3>
         </div>
-
-
-        <div class="prelude-card">
-            <div class="prelude-image">
-                <span>♥</span>
-                <p>THE PROMISE</p>
-            </div>
-
-            <div class="prelude-caption">
-                <span>03</span>
-                <h3>And Then Came Forever</h3>
-            </div>
-        </div>
-
     </div>
+
+
+    <!-- CARD 02 -->
+    <div class="prelude-card">
+        <div class="prelude-image photo-carousel" data-carousel="journey">
+
+            <img
+                src="assets/images/his1.jpeg"
+                alt="Paul and Comfort"
+                class="carousel-photo active"
+            >
+
+            <img
+                src="assets/images/ooo2.jpeg"
+                alt="Paul and Comfort"
+                class="carousel-photo"
+            >
+
+            <button class="carousel-btn carousel-prev" type="button">‹</button>
+            <button class="carousel-btn carousel-next" type="button">›</button>
+
+            <div class="carousel-dots">
+                <span class="carousel-dot active"></span>
+                <span class="carousel-dot"></span>
+            </div>
+
+            <div class="carousel-label">
+                THE JOURNEY
+            </div>
+
+        </div>
+
+        <div class="prelude-caption">
+            <span>02</span>
+            <h3>Moments Along The Way</h3>
+        </div>
+    </div>
+
+
+    <!-- CARD 03 -->
+    <div class="prelude-card">
+        <div class="prelude-image photo-carousel" data-carousel="promise">
+
+            <div class="carousel-coming-soon">
+                <span>♥</span>
+                <p>MORE MEMORIES<br>COMING SOON</p>
+            </div>
+
+            <div class="carousel-label">
+                THE PROMISE
+            </div>
+
+        </div>
+
+        <div class="prelude-caption">
+            <span>03</span>
+            <h3>And Then Came Forever</h3>
+        </div>
+    </div>
+
+</div>
 
     <div class="prelude-note">
         <span>✦</span>
@@ -252,9 +337,7 @@
 
 
 
-    <!-- SCRIPTURE -->
-
-    <section class="scripture hidden">
+   
 
         <!-- WEDDING PROGRAMME -->
 
@@ -500,33 +583,25 @@
 </section>
 
 
+<!-- SCRIPTURE -->
+<section class="scripture hidden">
 
+    <h2>
+        Our Foundation
+    </h2>
 
-        <h2>
+    <blockquote>
+        "Though one may be overpowered,
+        two can defend themselves.
+        A cord of three strands
+        is not quickly broken."
+    </blockquote>
 
-            Our Foundation
+    <p>
+        Ecclesiastes 4:12
+    </p>
 
-        </h2>
-
-        <blockquote>
-
-            "Though one may be overpowered,
-
-            two can defend themselves.
-
-            A cord of three strands
-
-            is not quickly broken."
-
-        </blockquote>
-
-        <p>
-
-            Ecclesiastes 4:12
-
-        </p>
-
-    </section>
+</section>
 
 
 
@@ -659,7 +734,7 @@
 
 
 
-    <!-- OUR STORY -->
+  <!-- OUR STORY -->
 
 <section class="story hidden" id="story">
 
@@ -669,33 +744,74 @@
             TWO HEARTS · ONE JOURNEY
         </p>
 
-        <h2>
-            Our Story
-        </h2>
+        <h2>Our Story</h2>
 
         <div class="story-divider">
-            ✦
+            <span>✦</span>
         </div>
 
-        <p class="story-text">
-            Through seasons apart and moments together,
-            God has faithfully guided our journey.
-        </p>
+        <img src="assets/images/11.jpeg"
+     alt="Paul and Comfort"
+     class="story-couple-photo">
 
-        <p class="story-text">
-            Today, we celebrate not only the love
-            that brought us together, but the grace
-            that has carried us this far.
-        </p>
+        <div class="story-opening">
+            <p>
+                Some stories begin with a moment.
+                Ours became a journey.
+            </p>
+        </div>
 
-        <p class="story-text">
-            With grateful hearts and surrounded by
-            the people we love, we begin this beautiful
-            new chapter together.
-        </p>
+        <div class="story-timeline">
 
-        <div class="story-signature">
-            Paul <span>&</span> Comfort
+            <div class="story-step">
+                <div class="story-marker">01</div>
+                <div class="story-card">
+                    <span class="story-card-label">THE BEGINNING</span>
+                    <h3>Where It All Began</h3>
+                    <p>
+                        Every beautiful story has a beginning.
+                        Somewhere along the way, two hearts
+                        found a reason to keep choosing each other.
+                    </p>
+                </div>
+            </div>
+
+            <div class="story-step">
+                <div class="story-marker">02</div>
+                <div class="story-card">
+                    <span class="story-card-label">THE JOURNEY</span>
+                    <h3>Through Every Season</h3>
+                    <p>
+                        Through seasons apart and moments together,
+                        God faithfully guided our journey and
+                        strengthened the promise between us.
+                    </p>
+                </div>
+            </div>
+
+            <div class="story-step">
+                <div class="story-marker">03</div>
+                <div class="story-card">
+                    <span class="story-card-label">THE PROMISE</span>
+                    <h3>And Then Came Forever</h3>
+                    <p>
+                        Today, surrounded by family, friends and
+                        the people we love, we celebrate the grace
+                        that brought us here.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="story-closing">
+            <p>
+                And this is only the beginning...
+            </p>
+
+            <div class="story-signature">
+                Paul <span>&</span> Comfort
+            </div>
         </div>
 
     </div>
@@ -726,63 +842,392 @@
     </div>
 
 
-    <div class="gallery-grid">
+   <div class="gallery-grid">
 
-        <div class="gallery-item gallery-large">
+    <!-- PHOTO 1 -->
+    <div class="gallery-item gallery-large">
+        <img
+            src="assets/images/som.jpeg"
+            alt="Paul and Comfort"
+        >
+    </div>
 
-            <div class="gallery-placeholder">
-                <span>🌿</span>
-                <p>
-                    Wedding moments
-                    coming soon
-                </p>
-            </div>
+    <!-- PHOTO 2 -->
+    <div class="gallery-item">
+        <img
+            src="assets/images/11.jpeg"
+            alt="Paul and Comfort"
+        >
+    </div>
 
+    <!-- PHOTO 3 -->
+    <div class="gallery-item">
+        <img
+            src="assets/images/couple-formal.jpeg"
+            alt="Paul and Comfort"
+        >
+    </div>
+
+    <!-- PHOTO 4 -->
+    <div class="gallery-item">
+        <img
+            src="assets/images/couple-closeup.jpeg"
+            alt="Paul and Comfort"
+        >
+    </div>
+
+    <!-- FUTURE PHOTO -->
+    <div class="gallery-item gallery-coming-soon">
+        <div class="gallery-placeholder">
+            <span>🌿</span>
+            <p>
+                More beautiful<br>
+                moments coming soon
+            </p>
         </div>
+    </div>
+
+</div>
 
 
-        <div class="gallery-item">
+    <p class="gallery-note">
+        More photographs will be added
+        after the wedding.
+    </p>
 
-            <div class="gallery-placeholder">
-                <span>♥</span>
-                <p>
-                    Paul & Comfort
-                </p>
-            </div>
+</section>
 
+<!-- ================= GUESTBOOK ================= -->
+
+<section class="guestbook hidden" id="guestbook">
+
+    <div class="guestbook-intro">
+        <p class="section-label">LEAVE A LITTLE LOVE</p>
+        <h2>Our Guestbook</h2>
+        <p>
+            You are part of this story too.
+            Leave Paul & Comfort a message, prayer,
+            memory or a little piece of your heart.
+        </p>
+    </div>
+
+    <div class="guestbook-layout">
+
+        <form class="guestbook-form" id="guestbookForm">
+
+    <div class="form-heading">
+        <span>✦</span>
+        <h3>Share Your Memory</h3>
+    </div>
+
+    <label for="guestName">Your Name</label>
+    <input
+        type="text"
+        id="guestName"
+        placeholder="How should we remember you?"
+        maxlength="60"
+        required
+    >
+
+    <label for="guestMessage">Your Message</label>
+    <textarea
+        id="guestMessage"
+        placeholder="Tell Paul & Comfort something special..."
+        maxlength="500"
+        required
+    ></textarea>
+
+    <label for="guestPhoto">Add a Photo <span>(optional)</span></label>
+
+    <div class="photo-upload">
+        <input
+            type="file"
+            id="guestPhoto"
+            accept="image/*"
+        >
+
+        <div class="photo-upload-content">
+            <span>📸</span>
+            <strong>Choose a photo</strong>
+            <small>JPG, PNG or WEBP</small>
         </div>
+    </div>
+
+    <div id="photoPreview" class="photo-preview"></div>
+
+    <button type="submit" class="guestbook-submit">
+        <span>♡</span>
+        Add To Our Memories
+    </button>
+
+    <p class="guestbook-note">
+        Share a moment, a feeling, or a memory.
+    </p>
+
+</form>
 
 
-        <div class="gallery-item">
+        <div class="memory-wall">
 
-            <div class="gallery-placeholder">
+            <div class="memory-wall-heading">
                 <span>✦</span>
-                <p>
-                    Our celebration
-                </p>
+                <h3>Evergreen Memories</h3>
+                <span>✦</span>
+            </div>
+
+            <div id="memoryList" class="memory-list">
+
+                <div class="memory-empty" id="memoryEmpty">
+                    <span>🌿</span>
+                    <p>
+                        The memory wall is waiting
+                        for your first message.
+                    </p>
+                </div>
+
             </div>
 
         </div>
 
+    </div>
 
-        <div class="gallery-item">
+</section>
 
-            <div class="gallery-placeholder">
+<!-- =========================================
+     PRIVATE MESSAGE
+     ========================================= -->
+
+<section class="private-message" id="privateMessage">
+
+    <div class="private-message-intro reveal">
+
+        <p class="section-kicker">A Little Light For Their Journey</p>
+
+        <h2>Prayer & Blessings</h2>
+
+        <p>
+            Leave Paul & Comfort a prayer, blessing,
+            message or words of love as they begin
+            this beautiful journey together.
+        </p>
+
+    </div>
+
+    <div class="private-message-card reveal">
+
+        <div class="private-message-icon">
+            🕯️
+        </div>
+
+        <h3>Leave Your Blessing</h3>
+
+        <p>
+            Your words will become part of their
+            Evergreen wedding memories.
+        </p>
+
+        <form id="privateMessageForm">
+
+            <label for="privateGuestName">
+                Your Name
+            </label>
+
+            <input
+                type="text"
+                id="privateGuestName"
+                placeholder="e.g. Jacob"
+                required
+            >
+
+            <label for="privateGuestContact">
+                Your Contact
+                <span>(optional)</span>
+            </label>
+
+            <input
+                type="text"
+                id="privateGuestContact"
+                placeholder="Phone or email"
+            >
+
+            <label for="privateMessageText">
+                Prayer / Blessing / Message
+            </label>
+
+            <textarea
+                id="privateMessageText"
+                placeholder="May your home always be filled with..."
+                required
+            ></textarea>
+
+            <button
+                type="submit"
+                class="private-message-submit"
+            >
+                🕯️ Send My Blessing
+            </button>
+
+            <p
+                class="private-message-status"
+                id="privateMessageStatus"
+            ></p>
+
+        </form>
+
+    </div>
+
+</section>
+<!-- =========================================
+     🎵 SONG DEDICATIONS
+     ========================================= -->
+
+<section class="song-dedications hidden" id="songDedications">
+
+    <div class="song-dedication-intro reveal">
+
+        <p class="section-kicker">For The Soundtrack Of Their Story</p>
+
+        <h2>Dedicate A Song</h2>
+
+        <p>
+            Is there a song that reminds you of Paul & Comfort,
+            their journey, or this beautiful day?
+            Leave it here for them.
+        </p>
+
+    </div>
+
+    <div class="song-dedication-card reveal">
+
+        <div class="song-icon">🎵</div>
+
+        <h3>A Song For The Couple</h3>
+
+        <form id="songDedicationForm">
+
+            <label for="songGuestName">
+                Your Name
+            </label>
+
+            <input
+                type="text"
+                id="songGuestName"
+                placeholder="e.g. Jacob"
+                required
+            >
+
+            <label for="songTitle">
+                Song Title
+            </label>
+
+            <input
+                type="text"
+                id="songTitle"
+                placeholder="e.g. Perfect"
+                required
+            >
+
+            <label for="songArtist">
+                Artist
+            </label>
+
+            <input
+                type="text"
+                id="songArtist"
+                placeholder="e.g. Ed Sheeran"
+                required
+            >
+
+            <label for="songMessage">
+                Why This Song?
+                <span>(optional)</span>
+            </label>
+
+            <textarea
+                id="songMessage"
+                placeholder="Tell Paul & Comfort why you chose this song..."
+            ></textarea>
+
+            <button
+                type="submit"
+                class="song-submit"
+            >
+                <span>🎶</span>
+                Dedicate This Song
+            </button>
+
+            <p
+                class="song-status"
+                id="songStatus"
+            ></p>
+
+        </form>
+
+    </div>
+
+    
+
+    <!-- SONG DEDICATION WALL -->
+
+<div class="song-wall reveal">
+
+    <div class="song-wall-heading">
+        <span>✦</span>
+        <h3>Songs Chosen For Them</h3>
+        <span>✦</span>
+    </div>
+
+    <div class="song-list" id="songList">
+
+        <div class="song-empty" id="songEmpty">
+            <span>🎵</span>
+            <p>
+                Be the first to dedicate a song to Paul & Comfort.
+            </p>
+        </div>
+
+    </div>
+
+</div>
+
+<!-- =========================================
+     🟢 LIVE GUEST ACTIVITY
+     ========================================= -->
+
+<section class="guest-activity" id="guestActivity">
+
+    <div class="guest-activity-intro reveal">
+
+        <p class="section-kicker">The Celebration Is Alive</p>
+
+        <h2>What's Happening</h2>
+
+        <p>
+            See little moments from guests joining Paul & Comfort
+            in celebrating their special day.
+        </p>
+
+    </div>
+
+    <div class="activity-board reveal">
+
+        <div class="activity-heading">
+            <span class="activity-live-dot"></span>
+            <span>Live Guest Activity</span>
+        </div>
+
+        <div
+            class="activity-list"
+            id="activityList"
+        >
+
+            <div
+                class="activity-empty"
+                id="activityEmpty"
+            >
                 <span>🌿</span>
                 <p>
-                    Memories
-                </p>
-            </div>
-
-        </div>
-
-
-        <div class="gallery-item">
-
-            <div class="gallery-placeholder">
-                <span>♥</span>
-                <p>
-                    Forever begins
+                    The celebration is just getting started...
                 </p>
             </div>
 
@@ -790,11 +1235,7 @@
 
     </div>
 
-
-    <p class="gallery-note">
-        More photographs will be added
-        after the wedding.
-    </p>
+</section>
 
 </section>
 
@@ -886,8 +1327,32 @@
 
 </footer>
 
-    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    
+    <script>
+console.log("INDEX HTML LOADED");
+</script>
 
+<!-- MEMORY PHOTO VIEWER -->
+<div class="photo-viewer" id="photoViewer">
+
+    <button
+        class="photo-viewer-close"
+        id="photoViewerClose"
+        aria-label="Close photo viewer"
+    >
+        &times;
+    </button>
+
+    <img
+        src=""
+        alt="Wedding memory"
+        id="photoViewerImage"
+    >
+
+</div>
+
+<script src="script.js"></script>
 </body>
 
 </html>
